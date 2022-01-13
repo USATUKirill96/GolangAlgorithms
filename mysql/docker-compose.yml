@@ -1,0 +1,13 @@
+version: "3.3"
+
+services:
+
+  db:
+    image: mysql
+    command: --default-authentication-plugin=mysql_native_password
+    restart: always
+    environment:
+      - MYSQL_ROOT_PASSWORD=kek
+      - MYSQL_DATABASE=stepik
+    ports:
+      - "3306:3306"
